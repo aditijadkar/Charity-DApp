@@ -438,13 +438,6 @@ Example
 - Charity Ratings
 
 ---
-
-# 👨‍💻 Author
-
-**Aditi Jadhav**
-
-Bachelor of Engineering (Computer Engineering)
-
 Blockchain | AI/ML | Full Stack Development
 
 ---
@@ -452,5 +445,3 @@ Blockchain | AI/ML | Full Stack Development
 # 📄 License
 
 This project is developed for academic and educational purposes.
-
-Licensed under the MIT License.
