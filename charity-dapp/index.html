@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Charity DApp</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/ethers@6.13.2/dist/ethers.umd.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Charity DApp</h1>
+
+    <div class="card">
+      <h3>Connection</h3>
+      <button id="connectBtn">Connect MetaMask</button>
+      <div id="account">Not connected</div>
+
+      <div class="card">
+        <button id="logoutBtn" class="secondary">Logout</button>
+      </div>
+
+      <label>Choose Role</label>
+      <select id="role">
+        <option value="donor">Donor</option>
+        <option value="charity">Charity</option>
+        <option value="owner">Owner</option>
+      </select>
+    </div>
+
+    <!-- Donor section -->
+    <div id="donorSection" class="card hidden">
+      <h3>Donor</h3>
+
+      <div>
+        <h4>Browse Verified Charities & Causes</h4>
+        <div id="donorBrowse"></div>
+      </div>
+
+      <div style="margin-top:12px">
+        <div id="donateToText">Select a cause to donate</div>
+        <input id="donateCauseId" placeholder="Cause ID" />
+        <input id="donateAmount" placeholder="Amount (ETH)" />
+        <input id="donateNote" placeholder="Note (optional)" />
+        <button id="donateBtn">Donate</button>
+        <button id="downloadReceipt" class="secondary">Download Last Receipt (PDF)</button>
+      </div>
+    </div>
+
+    <!-- Charity section -->
+    <div id="charitySection" class="card hidden">
+      <h3>Charity</h3>
+      <div>
+        <input id="charityName" placeholder="Charity Name" />
+        <button id="registerCharity">Register</button>
+      </div>
+
+      <h4>Create Cause</h4>
+      <input id="causeTitle" placeholder="Title" />
+      <input id="causeDesc" placeholder="Description" />
+      <button id="createCause">Create Cause</button>
+
+      <h4>Create Milestone</h4>
+      <input id="msCauseId" placeholder="Cause ID" />
+      <input id="msDesc" placeholder="Milestone description" />
+      <input id="msAmount" placeholder="Amount (ETH)" />
+      <button id="createMilestone">Add Milestone</button>
+
+      <h4 style="margin-top:12px">My Causes</h4>
+      <div id="myCharityName" style="font-size:13px;margin-bottom:6px"></div>
+      <div id="myCauses"></div>
+      <h4 style="margin-top:12px">Withdraw Released Funds</h4>
+<div>Available: <span id="charityWithdrawable">0 ETH</span></div>
+<input id="withdrawAmount" placeholder="Amount (ETH)" />
+<button id="withdrawBtn">Withdraw</button>
+
+    </div>
+
+    <!-- Owner section -->
+    <div id="ownerSection" class="card hidden">
+      <h3>Owner Controls</h3>
+
+      <div id="ownerLoginBox">
+        <input id="adminEmail" placeholder="admin@gmail.com" />
+        <input id="adminPass" placeholder="admin" type="password" />
+        <button id="ownerLoginBtn">Login as Owner</button>
+        <div id="ownerLoginMsg"></div>
+      </div>
+
+      <h4>Unverified Charities</h4>
+      <div id="ownerUnverified"></div>
+
+      <h4 style="margin-top:12px">Verified Charities (causes & milestones)</h4>
+      <div id="ownerVerified"></div>
+    </div>
+
+    <div class="card">
+      <h3>Browse Verified Charities & Causes</h3>
+      <div id="charityList"></div>
+    </div>
+
+    <div class="card">
+      <h3>Events</h3>
+      <div id="events"></div>
+    </div>
+
+  </div>
+
+  <div id="txModal" class="modal hidden">
+    <div class="modal-content">
+      <div id="txStatus">Waiting...</div>
+      <button id="closeModal">Close</button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

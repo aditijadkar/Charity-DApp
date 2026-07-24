@@ -1,0 +1,17 @@
+body{font-family:system-ui,Arial,sans-serif;margin:0;background:#0f172a;color:#e2e8f0}
+.container{max-width:1100px;margin:0 auto;padding:20px}
+h1{margin:10px 0 20px}
+.row{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.card{background:#111827;border:1px solid #1f2937;border-radius:8px;padding:16px}
+input,select,button{width:100%;margin:6px 0;padding:10px;border-radius:6px;border:1px solid #334155;background:#0b1220;color:#e2e8f0}
+button{background:#2563eb;border-color:#1d4ed8;cursor:pointer}
+button.secondary{background:#4b5563;border-color:#374151}
+button:disabled{opacity:.5;cursor:not-allowed}
+.hidden{display:none}
+#events{max-height:260px;overflow:auto;background:#0b1220;border:1px solid #1f2937;border-radius:6px;padding:8px;font-family:ui-monospace,monospace;font-size:12px}
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.6);display:flex;align-items:center;justify-content:center}
+.modal.hidden{display:none}
+.modal-content{background:#0b1220;border:1px solid #1f2937;border-radius:8px;padding:20px;min-width:320px}
+.charity{margin:10px 0;padding:8px;border:1px solid #334155;border-radius:6px}
+.charity ul{margin:6px 0 0 12px;padding:0;list-style:disc}
+.charity li{margin:4px 0}

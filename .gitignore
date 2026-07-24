@@ -1,0 +1,26 @@
+# Dependencies
+node_modules/
+
+# Hardhat cache
+cache/
+
+# Build artifacts
+artifacts/
+
+# Logs
+*.log
+
+# Environment files
+.env
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# VS Code
+.vscode/
+
+# Ignore documentation files
+charity.docx
+charity copy.docx
+Charity DApp - Execution Guide.txt
